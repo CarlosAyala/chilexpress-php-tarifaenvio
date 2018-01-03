@@ -3,4 +3,4 @@ Clase PHP para calcular tarifa de envío de encomiendas para servicio de Chilexp
 
 # Requerimientos
 PHP5.6+
-extension SOAP para php
+Extension SOAP para php
