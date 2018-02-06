@@ -6,6 +6,9 @@
 <p>Extension SOAP para php</p>
 
 # Información
+
+En "Docs", dejo la documentación con la que disponia para el cálculo de tarifa que es entregada por Chilexpress, la que es malisima.
+
 <p>Para poder comunicarse con Chilexpress, se debe tener la lista de todas las comunas que ellos utilizan y el código
 que le asignan a cada una. Aqui dejo una lista, pero puede ser que este desactualizada.</p>
 
