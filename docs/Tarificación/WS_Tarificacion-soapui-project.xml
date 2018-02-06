@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="WsTarificaCourier" resourceRoot="" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="TarificaCourierSOAP" type="wsdl" bindingName="{http://www.chilexpress.cl/TarificaCourier/}TarificaCourierSOAP" soapVersion="1_1" anonymous="optional" definition="http://qaws.ssichilexpress.cl/TarificarCourier?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://qaws.ssichilexpress.cl/TarificarCourier?wsdl"><con:part><con:url>http://qaws.ssichilexpress.cl/TarificarCourier?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions name="TarificaCourier" targetNamespace="http://www.chilexpress.cl/TarificaCourier/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.chilexpress.cl/TarificaCourier/" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema targetNamespace="http://www.chilexpress.cl/TarificaCourier/" xmlns:Q1="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierRequest" xmlns:Q2="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierResponse" xmlns:Q3="http://www.chilexpress.cl/common/HeaderRequest" xmlns:Q4="http://www.chilexpress.cl/common/HeaderResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.chilexpress.cl/TarificaCourier/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierResponse" schemaLocation="http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FPX_CorpValorizaCourier%2FPX000040_ValorizarCourier%2FSpecification%2FWSDL%2FPX000040_OpValorizarCourierResponse"/>
+      <xsd:import namespace="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierRequest" schemaLocation="http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FPX_CorpValorizaCourier%2FPX000040_ValorizarCourier%2FSpecification%2FWSDL%2FPX000040_OpValorizarCourierRequest"/>
+      <xsd:import namespace="http://www.chilexpress.cl/common/HeaderResponse" schemaLocation="http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FUT_EsquemasComunes%2FSpecifications%2FXSD%2FCommon%2FHeaderResponse"/>
+      <xsd:import namespace="http://www.chilexpress.cl/common/HeaderRequest" schemaLocation="http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FUT_EsquemasComunes%2FSpecifications%2FXSD%2FCommon%2FHeaderRequest"/>
+      <xsd:element name="headerRequest" type="Q3:datosHeaderRequest"/>
+      <xsd:element name="headerResponse" type="Q4:datosHeaderResponse"/>
+      <xsd:element name="TarificarCourier">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="reqValorizarCourier" type="Q1:reqValorizarCourier"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="TarificarCourierResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="respValorizarCourier" type="Q2:respValorizarCourier"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="TarificarCourierRequest">
+    <WL5G3N0:part element="WL5G3N1:TarificarCourier" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="TarificarCourierResponse">
+    <WL5G3N0:part element="WL5G3N1:TarificarCourierResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="headerRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:headerRequest" name="headerRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="headerResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:headerResponse" name="headerResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="TarificaCourier">
+    <WL5G3N0:operation name="TarificarCourier">
+      <WL5G3N0:input message="WL5G3N1:TarificarCourierRequest"/>
+      <WL5G3N0:output message="WL5G3N1:TarificarCourierResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="TarificaCourierSOAP" type="WL5G3N1:TarificaCourier">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="TarificarCourier">
+      <WL5G3N2:operation soapAction="http://www.chilexpress.cl/TarificaCourier/TarificarCourier"/>
+      <WL5G3N0:input>
+        <WL5G3N2:header message="WL5G3N1:headerRequestMessage" part="headerRequest" use="literal"/>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:header message="WL5G3N1:headerResponseMessage" part="headerResponse" use="literal"/>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="TarificaCourier">
+    <WL5G3N0:port binding="WL5G3N1:TarificaCourierSOAP" name="TarificaCourierSOAP">
+      <WL5G3N2:address location="http://QA_Purapel.cxp.cl:7011/TarificarCourier"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FPX_CorpValorizaCourier%2FPX000040_ValorizarCourier%2FSpecification%2FWSDL%2FPX000040_OpValorizarCourierResponse</con:url><con:content><![CDATA[<schema targetNamespace="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierResponse" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierResponse">
+  <complexType name="respValorizarCourier">
+    <sequence>
+      <element minOccurs="1" maxOccurs="1" name="CodEstado" type="xsd:int"/>
+      <element minOccurs="1" maxOccurs="1" name="GlsEstado" type="xsd:string"/>
+      <element minOccurs="1" maxOccurs="1" name="CodEstadoInterno" type="xsd:int"/>
+      <element minOccurs="1" maxOccurs="1" name="GlsEstadoInterno" type="xsd:string"/>
+      <element name="Servicios" type="tns:LstServicios" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="LstServicios">
+    <sequence>
+      <element name="CodServicio" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <element name="GlsServicio" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <element name="IndPesoVolumentrico" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <element name="PesoCalculo" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+      <element name="ValorServicio" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FPX_CorpValorizaCourier%2FPX000040_ValorizarCourier%2FSpecification%2FWSDL%2FPX000040_OpValorizarCourierRequest</con:url><con:content><![CDATA[<schema targetNamespace="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierRequest" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierRequest">
+  <complexType name="reqValorizarCourier">
+    <sequence>
+      <element name="CodCoberturaOrigen" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <element name="CodCoberturaDestino" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <element name="PesoPza" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+      <element name="DimAltoPza" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <element name="DimAnchoPza" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+      <element name="DimLargoPza" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FUT_EsquemasComunes%2FSpecifications%2FXSD%2FCommon%2FHeaderResponse</con:url><con:content><![CDATA[<schema targetNamespace="http://www.chilexpress.cl/common/HeaderResponse" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.chilexpress.cl/common/HeaderResponse">
+  <complexType name="datosTransaccion">
+    <sequence>
+      <element name="internalCode" type="xsd:string"/>
+      <element name="idTransaccionNegocio" type="xsd:string"/>
+      <element name="fechaHoraInicioTrx" nillable="true" type="xsd:dateTime"/>
+      <element name="fechaHoraFinTrx" nillable="true" type="xsd:dateTime"/>
+      <element name="estado" nillable="true" type="xsd:string"/>
+    </sequence>
+  </complexType>
+  <complexType name="datosHeaderResponse">
+    <sequence>
+      <element name="transaccion" type="tns:datosTransaccion"/>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://qaws.ssichilexpress.cl:80/TarificarCourier?SCHEMA%2FUT_EsquemasComunes%2FSpecifications%2FXSD%2FCommon%2FHeaderRequest</con:url><con:content><![CDATA[<!--edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by Andres (Casa)-->
+<schema targetNamespace="http://www.chilexpress.cl/common/HeaderRequest" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.chilexpress.cl/common/HeaderRequest">
+  <complexType name="datosConsumidor">
+    <sequence/>
+  </complexType>
+  <complexType name="datosTransaccion">
+    <sequence>
+      <element name="fechaHora">
+        <simpleType>
+          <restriction base="xsd:string">
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="idTransaccionNegocio">
+        <simpleType>
+          <restriction base="xsd:string">
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="idTransaccionOSB" minOccurs="0">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="sistema">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="usuario" minOccurs="0">
+        <simpleType>
+          <restriction base="xsd:string">
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="oficinaCaja" minOccurs="0">
+        <simpleType>
+          <restriction base="xsd:string">
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="nodoHeader" minOccurs="0">
+        <complexType>
+          <complexContent>
+            <extension base="tns:anyNode"/>
+          </complexContent>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="anyNode" mixed="true">
+    <complexContent mixed="true">
+      <restriction base="xsd:anyType">
+        <sequence>
+          <any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+      </restriction>
+    </complexContent>
+  </complexType>
+  <complexType name="datosHeaderRequest">
+    <sequence>
+      <element name="transaccion" type="tns:datosTransaccion"/>
+    </sequence>
+    <anyAttribute namespace="##other" processContents="lax"/>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://QA_Purapel.cxp.cl:7011/TarificarCourier</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.chilexpress.cl/TarificaCourier/TarificarCourier" name="TarificarCourier" bindingOperationName="TarificarCourier" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://qaws.ssichilexpress.cl/TarificarCourier</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tar="http://www.chilexpress.cl/TarificaCourier/" xmlns:head="http://www.chilexpress.cl/common/HeaderRequest" xmlns:opv="http://www.chilexpress.cl/ESB/TarificaCourier/OpValorizarCourierRequest">
+   <soapenv:Header>
+      <tar:headerRequest>
+         <head:transaccion>
+            <head:fechaHora>2015-09-11T16:00:00</head:fechaHora>
+            <head:idTransaccionNegocio>0</head:idTransaccionNegocio>
+            <head:sistema>MMO</head:sistema>
+         </head:transaccion>
+      </tar:headerRequest>
+   </soapenv:Header>
+   <soapenv:Body>
+      <tar:TarificarCourier>
+         <reqValorizarCourier>
+            <opv:CodCoberturaOrigen>STGO</opv:CodCoberturaOrigen>
+            <opv:CodCoberturaDestino>VALP</opv:CodCoberturaDestino>
+            <opv:PesoPza>1</opv:PesoPza>
+            <opv:DimAltoPza>1</opv:DimAltoPza>
+            <opv:DimAnchoPza>1</opv:DimAnchoPza>
+            <opv:DimLargoPza>1</opv:DimLargoPza>
+         </reqValorizarCourier>
+      </tar:TarificarCourier>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.chilexpress.cl/TarificaCourier/TarificarCourier"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
