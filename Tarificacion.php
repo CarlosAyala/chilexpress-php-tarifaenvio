@@ -7,13 +7,13 @@ Class Chileexpress_Tarificacion{
     
     /**
      * Retorna el valor del shipping de Chilexpress
-     * @param string $origen
-     * @param string $destino
-     * @param int $peso
-     * @param int $alto
-     * @param int $ancho
-     * @param int $largo
-     * @return mixed
+     * @param string $origen Codigo de la ciudad de origen
+     * @param string $destino Codigo de la ciudad destino
+     * @param int $peso en kilo
+     * @param int $alto en cm
+     * @param int $ancho en cm
+     * @param int $largo en cm
+     * @return mixed null o int con valor
      */
     public function get($origen, $destino, $peso, $alto, $ancho, $largo){
         $route = "TarificarCourier";
@@ -58,10 +58,12 @@ Class Chileexpress_Tarificacion{
         $result = $client->__soapCall( $route, [ $route => [ $method => $data ] ] );
         
         if (is_soap_fault($result)) {
-            return false;
+            return null;
         } else {
             $valor = null;
             if($result->respValorizarCourier->CodEstado == 0){
+
+		//estoy tomando el valor del servicio mayor.
                 foreach( $result->respValorizarCourier->Servicios as $servicios){
 
                     if(is_null($valor)){
@@ -72,9 +74,10 @@ Class Chileexpress_Tarificacion{
                         $valor = $servicios->ValorServicio;
                     }
                 }
+
             }
             if(is_null($valor)){
-                return false;
+                return null;
             } else {
                 return $valor;
             }
