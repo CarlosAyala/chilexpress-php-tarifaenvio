@@ -5,8 +5,9 @@
 <p>PHP5.6+</p>
 <p>Extension SOAP para php</p>
 
+# Información
 <p>Para poder comunicarse con Chilexpress, se debe tener la lista de todas las comunas que ellos utilizan y el código
-que le asignan a cada una. </p>
+que le asignan a cada una. Aqui dejo una lista, pero puede ser que este desactualizada.</p>
 
 |ACHAO;ACHA
 |ALGARROBO;ALGA
