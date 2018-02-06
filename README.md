@@ -1,12 +1,12 @@
 # chilexpress-php-tarifaenvio
-Clase PHP para calcular tarifa de envío de encomiendas para servicio de Chilexpress
+<p>Clase PHP para calcular tarifa de envío de encomiendas para servicio de Chilexpress</p>
 
 # Requerimientos
--PHP5.6+
--Extension SOAP para php
+<p>PHP5.6+</p>
+<p>Extension SOAP para php</p>
 
-Para poder comunicarse con Chilexpress, se debe tener la lista de todas las comunas que ellos utilizan y el código
-que le asignan a cada una. 
+<p>Para poder comunicarse con Chilexpress, se debe tener la lista de todas las comunas que ellos utilizan y el código
+que le asignan a cada una. </p>
 
 |ACHAO;ACHA
 |ALGARROBO;ALGA
